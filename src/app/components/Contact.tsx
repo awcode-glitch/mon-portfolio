@@ -51,7 +51,7 @@ export function Contact() {
                   </div>
                   <div>
                     <p className="font-medium text-gray-900">Email</p>
-                    <p className="text-gray-600">alexandre.martin@email.com</p>
+                    <p className="text-gray-600">maw106277@gmail.com</p>
                   </div>
                 </div>
 
@@ -61,7 +61,7 @@ export function Contact() {
                   </div>
                   <div>
                     <p className="font-medium text-gray-900">Téléphone</p>
-                    <p className="text-gray-600">+33 6 12 34 56 78</p>
+                    <p className="text-gray-600">+221 709570652</p>
                   </div>
                 </div>
 
@@ -71,21 +71,34 @@ export function Contact() {
                   </div>
                   <div>
                     <p className="font-medium text-gray-900">Localisation</p>
-                    <p className="text-gray-600">Paris, France</p>
+                    <p className="text-gray-600">Dakar</p>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-xl">
-              <h4 className="font-semibold text-gray-900 mb-3">
-                Disponibilité
-              </h4>
-              <p className="text-gray-700">
-                Actuellement à la recherche d'une alternance pour septembre
-                2026. Ouvert aux opportunités de stage et aux projets
-                freelance.
-              </p>
+            <div className="space-y-5">
+              <div className="bg-slate-100 p-6 rounded-xl border border-slate-200">
+                <div className="flex items-start gap-4">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-blue-600 text-white shadow">
+                    <span className="text-2xl">“</span>
+                  </div>
+                  <div>
+                    <p className="text-lg font-semibold text-slate-900">
+                      La seule façon de faire du bon travail, c'est d'aimer ce que vous faites.
+                    </p>
+                    <p className="text-sm text-slate-500 mt-3">— Steve Jobs</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-gradient-to-r from-blue-600 via-sky-600 to-cyan-500 p-6 rounded-xl border border-blue-300 shadow-lg text-white">
+                <h4 className="font-semibold text-xl mb-3">Votre projet mérite un développeur engagé</h4>
+                <p className="text-sm leading-7 opacity-90">
+                  Disponible pour de nouveaux projets, réponse sous 24h.
+                  <span className="block font-semibold text-white mt-3">Discutons de votre idée et transformons-la en une solution professionnelle.</span>
+                </p>
+              </div>
             </div>
           </div>
 

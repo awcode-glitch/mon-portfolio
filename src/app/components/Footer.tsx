@@ -6,10 +6,9 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div>
-            <h3 className="text-xl font-semibold mb-4">Alexandre Martin</h3>
+            <h3 className="text-xl font-semibold mb-4">Mohamed Aboubacar Aw</h3>
             <p className="text-gray-400">
-              Étudiant en développement web passionné par la création
-              d'expériences numériques innovantes.
+              Étudiant en Genie logiciel et Systeme d'information.
             </p>
           </div>
 
@@ -21,7 +20,7 @@ export function Footer() {
                   href="#accueil"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  Accueil
+                Dakar  Accueil
                 </a>
               </li>
               <li>
@@ -55,7 +54,7 @@ export function Footer() {
             <h3 className="text-xl font-semibold mb-4">Réseaux sociaux</h3>
             <div className="flex gap-4">
               <a
-                href="https://github.com"
+                href="https://github.com/awcode-glitch"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 bg-gray-800 rounded-full hover:bg-blue-600 transition-colors"
@@ -63,7 +62,7 @@ export function Footer() {
                 <Github size={20} />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/mohamed-aboubacar-aw-790603321"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 bg-gray-800 rounded-full hover:bg-blue-600 transition-colors"
@@ -71,7 +70,7 @@ export function Footer() {
                 <Linkedin size={20} />
               </a>
               <a
-                href="mailto:contact@example.com"
+                href="mailto:maw106277@gmail.com"
                 className="p-3 bg-gray-800 rounded-full hover:bg-blue-600 transition-colors"
               >
                 <Mail size={20} />
@@ -80,12 +79,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 pt-8 text-center">
-          <p className="text-gray-400 flex items-center justify-center gap-2">
-            Fait avec <Heart size={16} className="text-red-500" /> par Alexandre
-            Martin © 2026
-          </p>
-        </div>
+        
       </div>
     </footer>
   );

@@ -1,36 +1,42 @@
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink } from "lucide-react";
+import senagroImage from "../../assets/SENAGRO.jpeg";
+import sunuAvenirImage from "../../assets/SunuAvenir.jpeg";
+import sunuActuImage from "../../assets/SunuActu.jpeg";
+import cImage from "../../assets/C.jpeg";
 
 export function Projects() {
+  
   const projects = [
     {
-      title: "Application Web E-commerce",
+      title: "Application web d'agriculture, d'elevage et aviculture",
       description:
-        "Développement d'une plateforme e-commerce complète avec React et Node.js. Intégration de paiement sécurisé et gestion de stock en temps réel.",
-      image:
-        "https://images.unsplash.com/photo-1557324232-b8917d3c3dcb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBkZXZlbG9wbWVudCUyMGNvZGluZ3xlbnwxfHx8fDE3NzU2MDcyOTV8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-      tags: ["React", "Node.js", "MongoDB", "Stripe"],
-      github: "https://github.com",
-      demo: "https://example.com",
+        "SENAGRO est une plateforme agrobusiness sénégalaise qui connecte producteurs et acheteurs autour de produits agricoles locaux — céréales, produits transformés et équipements. Le site propose une vitrine moderne avec filtrage de produits, formulaire de contact et livraison à Dakar et en régions..",
+      image: senagroImage,
+      tags: [" HTML", "Tailwind CSS", "TypeScript / JavaScrip", "React"],
+      demo: "https://seneagrofim.vercel.app/",
     },
     {
-      title: "Application Mobile Fitness",
+      title: "Application d'orrientation apres bac",
       description:
-        "Application mobile de suivi d'activité physique avec planification d'entraînements personnalisés et suivi des progrès.",
-      image:
-        "https://images.unsplash.com/photo-1609921212029-bb5a28e60960?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2JpbGUlMjBhcHAlMjBkZXNpZ258ZW58MXx8fHwxNzc1NTkwNzk5fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+        "SunuAvenir est une application qui guide les bacheliers sénégalais dans la découverte des filières disponibles et les aide à choisir celle qui correspond le mieux à leur profil et à leurs ambitions. .",
+      image: sunuAvenirImage,
       tags: ["React Native", "Firebase", "TypeScript"],
-      github: "https://github.com",
-      demo: "https://example.com",
+      demo: "https://sunuavenir.vercel.app/",
     },
     {
-      title: "Dashboard Analytics",
+      title: "application d'actualités numérique ",
       description:
-        "Tableau de bord interactif pour visualiser des données en temps réel avec des graphiques personnalisables et export de rapports.",
-      image:
-        "https://images.unsplash.com/photo-1666875753105-c63a6f3bdc86?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkYXRhJTIwc2NpZW5jZSUyMGFuYWx5dGljc3xlbnwxfHx8fDE3NzU1ODM2ODd8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-      tags: ["React", "D3.js", "Python", "PostgreSQL"],
-      github: "https://github.com",
-      demo: "https://example.com",
+        "SunuActu est une application d'actualités numérique qui centralise et diffuse les informations en temps réel, offrant aux utilisateurs un accès rapide et simplifié à toute l'actualité locale et internationale..",
+      image: sunuActuImage,
+      tags: ["Php", "Javascript", "Css"],
+      demo: "https://sunuactu.free.nf/",
+    },
+    {
+      title: "Système de gestion des étudiants",
+      description:
+        "Application console développée en langage C permettant de gérer efficacement les notes des étudiants, les classes, les matières et les informations académiques, avec une persistance des données via des fichiers CSV. Le système offre des fonctionnalités complètes de gestion (CRUD), de consultation et de calcul des moyennes par étudiant ou par classe.",
+      image: cImage,
+      tags: ["Langage C"],
     },
   ];
 
@@ -46,36 +52,18 @@ export function Projects() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
           {projects.map((project, index) => (
             <div
               key={index}
               className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group"
             >
-              <div className="relative overflow-hidden h-48">
+              <div className="overflow-hidden h-48">
                 <img
                   src={project.image}
                   alt={project.title}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4 gap-4">
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-white text-gray-900 p-2 rounded-full hover:bg-gray-100 transition-colors"
-                  >
-                    <Github size={20} />
-                  </a>
-                  <a
-                    href={project.demo}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-blue-600 text-white p-2 rounded-full hover:bg-blue-700 transition-colors"
-                  >
-                    <ExternalLink size={20} />
-                  </a>
-                </div>
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
@@ -84,7 +72,7 @@ export function Projects() {
                 <p className="text-gray-600 mb-4 line-clamp-3">
                   {project.description}
                 </p>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2 mb-4">
                   {project.tags.map((tag, tagIndex) => (
                     <span
                       key={tagIndex}
@@ -94,6 +82,17 @@ export function Projects() {
                     </span>
                   ))}
                 </div>
+                {project.demo && (
+                  <a
+                    href={project.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center gap-2 mt-4 w-full rounded-lg bg-blue-600 px-4 py-3 text-sm font-semibold text-white transition hover:bg-blue-700"
+                  >
+                    Visiter le site
+                    <ExternalLink size={18} />
+                  </a>
+                )}
               </div>
             </div>
           ))}

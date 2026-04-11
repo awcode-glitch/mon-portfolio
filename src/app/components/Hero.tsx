@@ -12,16 +12,16 @@ export function Hero() {
             <div className="space-y-2">
               <p className="text-blue-600 text-lg">Bonjour, je suis</p>
               <h1 className="text-5xl md:text-6xl font-bold text-gray-900">
-                Alexandre Martin
+                Mohamed Aboubacar
               </h1>
               <h2 className="text-2xl md:text-3xl text-gray-700">
-                Étudiant en Développement Web
+                Étudiant en Genie logiciel et systeme d'information
               </h2>
             </div>
             <p className="text-lg text-gray-600 leading-relaxed">
-              Passionné par le développement web et mobile, je crée des
+              Passionné par le Genie logiciel, je crée des
               expériences numériques innovantes et intuitives. Actuellement en
-              Master Informatique, je recherche une alternance pour septembre
+              Licence 2 Informatique, je recherche un Stage pour mai
               2026.
             </p>
             <div className="flex flex-wrap gap-4">
@@ -42,7 +42,7 @@ export function Hero() {
             </div>
             <div className="flex gap-4 pt-4">
               <a
-                href="https://github.com"
+                href="https://github.com/awcode-glitch"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 bg-white rounded-full shadow-md hover:shadow-lg hover:scale-110 transition-all text-gray-700 hover:text-blue-600"
@@ -50,7 +50,7 @@ export function Hero() {
                 <Github size={24} />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/mohamed-aboubacar-aw-790603321"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 bg-white rounded-full shadow-md hover:shadow-lg hover:scale-110 transition-all text-gray-700 hover:text-blue-600"
@@ -58,7 +58,7 @@ export function Hero() {
                 <Linkedin size={24} />
               </a>
               <a
-                href="mailto:contact@example.com"
+                href="mailto:maw106277@gmail.com"
                 className="p-3 bg-white rounded-full shadow-md hover:shadow-lg hover:scale-110 transition-all text-gray-700 hover:text-blue-600"
               >
                 <Mail size={24} />
@@ -68,9 +68,10 @@ export function Hero() {
           <div className="relative">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <img
-                src="https://images.unsplash.com/photo-1759884248009-92c5e957708e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdHVkZW50JTIwZGV2ZWxvcGVyJTIwd29ya3NwYWNlfGVufDF8fHx8MTc3NTYwOTI0Nnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                src="/MHDAW.jpeg"
                 alt="Workspace"
-                className="w-full h-[500px] object-cover"
+                className="w-full h-[650px] object-cover object-cover"
+                style={{ objectPosition: "100% 100%" }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-blue-900/50 to-transparent"></div>
             </div>

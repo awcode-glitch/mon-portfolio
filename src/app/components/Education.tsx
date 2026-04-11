@@ -3,43 +3,49 @@ import { GraduationCap, Calendar, MapPin } from "lucide-react";
 export function Education() {
   const education = [
     {
-      degree: "Master Informatique",
-      school: "Université Paris-Saclay",
-      location: "Paris, France",
-      period: "2024 - 2026",
+      degree: "Licence2 Informatique",
+      school: "Ecole superieur polytechnique",
+      location: "Dakar",
+      period: "2025 - 2026",
       description:
-        "Spécialisation en développement logiciel et intelligence artificielle. Focus sur les architectures web modernes et le machine learning.",
+        "Spécialisation en développement logiciel  Focus sur les architectures web modernes .",
       achievements: [
-        "Mention Bien",
+        "Mention ABien",
         "Projet de fin d'année primé",
         "Participation à des hackathons",
+        "Recherche Stage "
       ],
     },
     {
-      degree: "Licence Informatique",
-      school: "Université Paris-Saclay",
-      location: "Paris, France",
-      period: "2021 - 2024",
+      degree: "Licence 1 Informatique",
+      school: "Ecole superieur polytechnique",
+      location: "Dakar",
+      period: "2024 - 2025",
       description:
         "Formation complète en informatique avec des bases solides en programmation, algorithmique et bases de données.",
       achievements: [
-        "Major de promotion",
-        "Stage en entreprise de 6 mois",
+        "Mention ABIEN",
+        "Stage en entreprise de 2 mois",
         "Projet tutoré en équipe",
       ],
     },
     {
-      degree: "Baccalauréat Scientifique",
-      school: "Lycée Henri IV",
-      location: "Paris, France",
-      period: "2018 - 2021",
+      degree: "Licence 1 Informatique",
+      school: "Université Virtuelle du Sénégal (UVS)",
+      location: "Sébikotane",
+      period: "2024 - 2026",
       description:
-        "Spécialité Mathématiques et NSI (Numérique et Sciences Informatiques). Option européenne anglais.",
-      achievements: [
-        "Mention Très Bien",
-        "Prix d'excellence en Mathématiques",
-        "Participation aux Olympiades de Mathématiques",
-      ],
+        "Licence developpement d'applications : web, mobile gaming",
+      
+    },
+    {
+      degree: "Baccalauréat Scientifique",
+      school: "Lycée Moderne de rufisque",
+      location: "rufisque ",
+      period: "2023 - 2024",
+      Option:
+        "S2.",
+      
     },
   ];
 
@@ -102,22 +108,24 @@ export function Education() {
 
                     <p className="text-gray-700 mb-4">{item.description}</p>
 
-                    <div className="space-y-2">
-                      <p className="font-semibold text-gray-900 text-sm">
-                        Réalisations :
-                      </p>
-                      <ul className="space-y-1">
-                        {item.achievements.map((achievement, achIndex) => (
-                          <li
-                            key={achIndex}
-                            className="text-sm text-gray-600 flex items-start gap-2"
-                          >
-                            <span className="text-blue-600 mt-1">•</span>
-                            <span>{achievement}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
+                    {item.achievements && (
+                      <div className="space-y-2">
+                        <p className="font-semibold text-gray-900 text-sm">
+                          Réalisations :
+                        </p>
+                        <ul className="space-y-1">
+                          {item.achievements.map((achievement, achIndex) => (
+                            <li
+                              key={achIndex}
+                              className="text-sm text-gray-600 flex items-start gap-2"
+                            >
+                              <span className="text-blue-600 mt-1">•</span>
+                              <span>{achievement}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>

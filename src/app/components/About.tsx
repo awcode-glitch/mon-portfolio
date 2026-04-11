@@ -5,7 +5,7 @@ export function About() {
     {
       icon: Code,
       title: "Développement",
-      description: "Expertise en React, TypeScript et Node.js",
+      description: "Expertise en java, python et php",
     },
     {
       icon: Lightbulb,
@@ -35,8 +35,8 @@ export function About() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <p className="text-lg text-gray-700 leading-relaxed">
-              Étudiant en Master Informatique, je me spécialise dans le
-              développement d'applications web et mobiles. Mon parcours m'a
+              Étudiant en Licence Informatique, je me spécialise dans le
+              Genie logiciel et le systeme d'information. Mon parcours m'a
               permis d'acquérir une solide expertise technique et une capacité
               d'adaptation aux nouvelles technologies.
             </p>
@@ -49,21 +49,21 @@ export function About() {
             <div className="grid grid-cols-2 gap-4 pt-4">
               <div className="space-y-1">
                 <p className="text-sm text-gray-600">Nom</p>
-                <p className="font-semibold text-gray-900">Alexandre Martin</p>
+                <p className="font-semibold text-gray-900">Mohamed Aboubacar AW</p>
               </div>
               <div className="space-y-1">
                 <p className="text-sm text-gray-600">Email</p>
                 <p className="font-semibold text-gray-900">
-                  alexandre@email.com
+                  maw106277@gmail.com
                 </p>
               </div>
               <div className="space-y-1">
                 <p className="text-sm text-gray-600">Téléphone</p>
-                <p className="font-semibold text-gray-900">+33 6 12 34 56 78</p>
+                <p className="font-semibold text-gray-900">+221 709570652</p>
               </div>
               <div className="space-y-1">
                 <p className="text-sm text-gray-600">Localisation</p>
-                <p className="font-semibold text-gray-900">Paris, France</p>
+                <p className="font-semibold text-gray-900">Dakar</p>
               </div>
             </div>
           </div>
