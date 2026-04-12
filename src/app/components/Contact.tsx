@@ -1,5 +1,6 @@
 import { Mail, Phone, MapPin, Send } from "lucide-react";
 import { useState } from "react";
+import { supabase } from "../../lib/supabaseClient";
 
 export function Contact() {
   const [formData, setFormData] = useState({
@@ -8,11 +9,32 @@ export function Contact() {
     subject: "",
     message: "",
   });
+  const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Simulated form submission
-    alert("Message envoyé ! (Simulation)");
+    setLoading(true);
+    setStatus("idle");
+
+    const { error } = await supabase.from("messages").insert([
+      {
+        name: formData.name,
+        email: formData.email,
+        subject: formData.subject,
+        message: formData.message,
+      },
+    ]);
+
+    setLoading(false);
+
+    if (error) {
+      console.error("Supabase insert error:", error);
+      setStatus("error");
+      return;
+    }
+
+    setStatus("success");
     setFormData({ name: "", email: "", subject: "", message: "" });
   };
 
@@ -186,12 +208,19 @@ export function Contact() {
 
               <button
                 type="submit"
-                className="w-full bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center gap-2 font-medium"
+                disabled={loading}
+                className="w-full bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center gap-2 font-medium disabled:cursor-not-allowed disabled:opacity-60"
               >
                 <Send size={20} />
-                Envoyer le message
+                {loading ? "Envoi en cours..." : "Envoyer le message"}
               </button>
             </form>
+            {status === "success" && (
+              <p className="mt-4 text-sm text-green-600">Message envoyé avec succès.</p>
+            )}
+            {status === "error" && (
+              <p className="mt-4 text-sm text-red-600">Une erreur est survenue, réessayez.</p>
+            )}
           </div>
         </div>
       </div>
