@@ -18,7 +18,7 @@ export function Certifications() {
       skills: ["Python", "Programming"],
       image: cs50Pdf,
       verifyUrl: "https://cs50.harvard.edu/python/",
-      certificateUrl: "https://cs50.harvard.edu/certificates/c8a23889-4192-4bbc-9761-0bf4deb64efd",
+      certificateUrl: cs50Pdf,
     },
     {
       title: "HCIA-Datacom V1.0 (French)",
@@ -40,7 +40,7 @@ export function Certifications() {
       skills: ["Cyberdéfense", "Sécurité Réseau", "Hacking Éthique"],
       image: certificatHdnaImage,
       verifyUrl: "https://hackerdna.com/fr/dashboard",
-      certificateUrl: "https://hackerdna.com/fr/labs/complete/5a43ee53-2e95-48b4-ba32-88625ac894dd",
+      certificateUrl: certificatHdnaImage,
     },
   ];
 

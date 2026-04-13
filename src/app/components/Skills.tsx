@@ -22,7 +22,7 @@ export function Skills() {
       category: "Outils",
       skills: [
         { name: "Git", level: 90 },
-        { name: "suap", level: 95 },
+        { name: "linux", level: 95 },
         { name: "Figma", level: 85 },
         { name: "VS Code", level: 95 },
       ],
