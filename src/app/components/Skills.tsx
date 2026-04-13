@@ -62,13 +62,8 @@ export function Skills() {
               <div className="space-y-6">
                 {category.skills.map((skill, skillIndex) => (
                   <div key={skillIndex}>
-                    <div className="flex justify-between mb-2">
-                      <span className="text-gray-700 font-medium">
-                        {skill.name}
-                      </span>
-                      <span className="text-blue-600 font-semibold">
-                        {skill.level}%
-                      </span>
+                    <div className="mb-2">
+                      <span className="text-gray-700 font-medium">{skill.name}</span>
                     </div>
                     <div className="w-full bg-gray-200 rounded-full h-2.5 overflow-hidden">
                       <div
