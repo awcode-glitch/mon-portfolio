@@ -101,16 +101,11 @@ export function Contact() {
 
             <div className="space-y-5">
               <div className="bg-slate-100 p-6 rounded-xl border border-slate-200">
-                <div className="flex items-start gap-4">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-blue-600 text-white shadow">
-                    <span className="text-2xl">“</span>
-                  </div>
-                  <div>
-                    <p className="text-lg font-semibold text-slate-900">
-                      “La seule façon de faire du bon travail, c'est d'aimer ce que vous faites.”
-                    </p>
-                    <p className="text-sm text-slate-500 mt-3">— Steve Jobs</p>
-                  </div>
+                <div>
+                  <p className="text-lg font-semibold text-slate-900">
+                    “La seule façon de faire du bon travail, c'est d'aimer ce que vous faites.”
+                  </p>
+                  <p className="text-sm text-slate-500 mt-3">— Steve Jobs</p>
                 </div>
               </div>
 

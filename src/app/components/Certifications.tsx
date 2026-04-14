@@ -92,11 +92,11 @@ export function Certifications() {
 
         {/* Certifications Carousel */}
         <div className="relative">
-          <div className="flex flex-col gap-8 md:flex-row md:overflow-x-auto md:pb-4 md:pr-2 md:scroll-smooth md:snap-x md:snap-mandatory">
+          <div className="grid gap-8 md:grid-flow-col md:auto-cols-[minmax(320px,380px)] md:grid-rows-1 md:overflow-x-auto md:pb-4 md:pr-2 md:scroll-smooth md:snap-x md:snap-mandatory">
             {filteredCertifications.map((cert, index) => (
               <div
                 key={index}
-                className="w-full md:min-w-[320px] md:max-w-[380px] md:flex-shrink-0 md:snap-center rounded-xl bg-white shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100"
+                className="rounded-xl bg-white shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100"
               >
                 {/* Image Container */}
                 <div className="relative h-48 bg-gradient-to-br from-blue-600 to-indigo-700 overflow-auto">
