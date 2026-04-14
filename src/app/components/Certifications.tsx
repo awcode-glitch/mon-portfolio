@@ -40,7 +40,7 @@ export function Certifications() {
       skills: ["Cyberdéfense", "Sécurité Réseau", "Hacking Éthique"],
       image: certificatHdnaImage,
       verifyUrl: "https://hackerdna.com/fr/dashboard",
-      certificateUrl: "https://hackerdna.com/fr/labs/complete/5a43ee53-2e95-48b4-ba32-88625ac894dd",
+      certificateUrl: certificatHdnaImage,
     },
   ];
 
