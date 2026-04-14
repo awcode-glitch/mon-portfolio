@@ -17,6 +17,7 @@ export default function AdminPage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   const [savingId, setSavingId] = useState<string | null>(null);
+  const [deletingId, setDeletingId] = useState<string | null>(null);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -49,7 +50,7 @@ export default function AdminPage() {
     setError("");
 
     const { data, error } = await supabase
-      .from<Message>("messages")
+      .from("messages")
       .select("id,name,email,subject,message,read,created_at")
       .order("created_at", { ascending: false });
 
@@ -79,6 +80,23 @@ export default function AdminPage() {
 
     if (error) {
       setError("Impossible de mettre à jour le statut.");
+      return;
+    }
+
+    await loadMessages();
+  };
+
+  const deleteMessage = async (message: Message) => {
+    if (!window.confirm("Supprimer définitivement ce message ?")) {
+      return;
+    }
+
+    setDeletingId(message.id);
+    const { error } = await supabase.from("messages").delete().eq("id", message.id);
+    setDeletingId(null);
+
+    if (error) {
+      setError("Impossible de supprimer ce message.");
       return;
     }
 
@@ -145,13 +163,22 @@ export default function AdminPage() {
                   <div className="text-sm text-slate-500">
                     ID : <span className="font-mono text-slate-700">{message.id}</span>
                   </div>
-                  <button
-                    onClick={() => markAsRead(message)}
-                    disabled={savingId === message.id}
-                    className="inline-flex items-center justify-center rounded-2xl bg-blue-600 px-4 py-2 text-sm font-medium text-white transition hover:bg-blue-700 disabled:opacity-60"
-                  >
-                    {savingId === message.id ? "Sauvegarde..." : message.read ? "Marquer comme non lu" : "Marquer comme lu"}
-                  </button>
+                  <div className="flex flex-col gap-3 sm:flex-row">
+                    <button
+                      onClick={() => markAsRead(message)}
+                      disabled={savingId === message.id || deletingId === message.id}
+                      className="inline-flex items-center justify-center rounded-2xl bg-blue-600 px-4 py-2 text-sm font-medium text-white transition hover:bg-blue-700 disabled:opacity-60"
+                    >
+                      {savingId === message.id ? "Sauvegarde..." : message.read ? "Marquer comme non lu" : "Marquer comme lu"}
+                    </button>
+                    <button
+                      onClick={() => deleteMessage(message)}
+                      disabled={savingId === message.id || deletingId === message.id}
+                      className="inline-flex items-center justify-center rounded-2xl bg-red-600 px-4 py-2 text-sm font-medium text-white transition hover:bg-red-700 disabled:opacity-60"
+                    >
+                      {deletingId === message.id ? "Suppression..." : "Supprimer"}
+                    </button>
+                  </div>
                 </div>
               </article>
             ))}
