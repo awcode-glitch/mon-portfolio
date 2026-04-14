@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, Download, ExternalLink } from "lucide-react";
+import { Github, Linkedin, Mail, ExternalLink } from "lucide-react";
 
 export function Hero() {
   return (
@@ -12,7 +12,7 @@ export function Hero() {
             <div className="space-y-2">
               <p className="text-blue-600 text-lg">Bonjour, je suis</p>
               <h1 className="text-5xl md:text-6xl font-bold text-gray-900">
-                Mohamed Aboubacar
+                Mohamed Aboubacar AW
               </h1>
               <h2 className="text-2xl md:text-3xl text-gray-700">
                 Étudiant en Genie logiciel et systeme d'information
@@ -26,7 +26,7 @@ export function Hero() {
             </p>
             <div className="flex flex-wrap gap-4">
               <a
-                href="/CV_Av_Mohamed%20Aboubacar_Aw.pdf"
+                href="/CV_Av_Mohamed_Aboubacar_Aw.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-all shadow-lg hover:shadow-xl flex items-center gap-2"
