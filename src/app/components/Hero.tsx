@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, Download } from "lucide-react";
+import { Github, Linkedin, Mail, Download, ExternalLink } from "lucide-react";
 
 export function Hero() {
   return (
@@ -25,10 +25,15 @@ export function Hero() {
               2026.
             </p>
             <div className="flex flex-wrap gap-4">
-              <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-all shadow-lg hover:shadow-xl flex items-center gap-2">
-                <Download size={20} />
-                Télécharger CV
-              </button>
+              <a
+                href="/CV_Av_Mohamed%20Aboubacar_Aw.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-all shadow-lg hover:shadow-xl flex items-center gap-2"
+              >
+                <ExternalLink size={20} />
+                Voir le CV
+              </a>
               <button
                 onClick={() =>
                   document

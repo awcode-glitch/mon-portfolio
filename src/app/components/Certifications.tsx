@@ -154,7 +154,7 @@ export function Certifications() {
                 </div>
 
                 {/* Action Buttons */}
-                <div className="flex gap-3">
+                <div className="flex flex-col gap-3 sm:flex-row">
                   <a
                     href={cert.verifyUrl}
                     target="_blank"

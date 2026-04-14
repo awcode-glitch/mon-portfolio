@@ -59,19 +59,14 @@ export function Skills() {
               <h3 className="text-2xl font-semibold text-gray-900 mb-6">
                 {category.category}
               </h3>
-              <div className="space-y-6">
+              <div className="flex flex-wrap gap-3">
                 {category.skills.map((skill, skillIndex) => (
-                  <div key={skillIndex}>
-                    <div className="mb-2">
-                      <span className="text-gray-700 font-medium">{skill.name}</span>
-                    </div>
-                    <div className="w-full bg-gray-200 rounded-full h-2.5 overflow-hidden">
-                      <div
-                        className="bg-gradient-to-r from-blue-500 to-indigo-600 h-2.5 rounded-full transition-all duration-1000 ease-out"
-                        style={{ width: `${skill.level}%` }}
-                      ></div>
-                    </div>
-                  </div>
+                  <span
+                    key={skillIndex}
+                    className="inline-flex items-center rounded-full bg-blue-50 px-4 py-2 text-sm font-medium text-blue-700"
+                  >
+                    {skill.name}
+                  </span>
                 ))}
               </div>
             </div>

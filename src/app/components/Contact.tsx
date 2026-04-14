@@ -107,7 +107,7 @@ export function Contact() {
                   </div>
                   <div>
                     <p className="text-lg font-semibold text-slate-900">
-                      La seule façon de faire du bon travail, c'est d'aimer ce que vous faites.
+                      “La seule façon de faire du bon travail, c'est d'aimer ce que vous faites.”
                     </p>
                     <p className="text-sm text-slate-500 mt-3">— Steve Jobs</p>
                   </div>
